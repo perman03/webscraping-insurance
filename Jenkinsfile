@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    parameters{
+        string(name: 'BANK_NAME', defaultValue: 'Bank', description: 'Nombre del banco a escrapear')
+    }
     environment {
         // Define variables de entorno necesarias
         NODE_HOME = 'C:\\Program Files\\nodejs' // Ajusta esto según tu entorno
@@ -35,14 +38,14 @@ pipeline {
                 echo 'Publicando artefactos...'
                 // Copia videos u otros artefactos al directorio para HTML Publisher
                 bat 'mkdir target'
-                bat 'copy secureCar.csv target\\'
+                bat "copy ${params.BANK_NAME}Info.csv target\\"
                 
                 publishHTML(target: [
                     allowMissing: false,
                     keepAll: true,
                     reportDir: 'target',
-                    reportFiles: 'secureCar.csv',
-                    reportName: 'Secure Car Info'
+                    reportFiles: "${params.BANK_NAME}Info.csv",
+                    reportName: "${params.BANK_NAME} Info"
                 ])
             }
         }

@@ -89,7 +89,7 @@ When('I view my car info and extract it', async()=>{
 
     
     const csvWriter = createObjectCsvWriter({
-        path: 'secureCar.csv',
+        path: 'banorteInfo.csv',
         header: [
             {id: 'carInfo', title: 'Car Info'},
             {id: 'carYear', title: 'Car Year'},
