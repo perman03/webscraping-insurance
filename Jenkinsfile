@@ -30,7 +30,7 @@ pipeline {
         stage('Archive CSV') {
             steps {
                 echo 'Archivando el CSV generado...'
-                archiveArtifacts artifacts: 'secureCar.csv', fingerprint: true
+                archiveArtifacts artifacts: "${params.BANK_NAME}Info.csv", fingerprint: true
             }
         }
         stage('Publish Reports and Videos') {
