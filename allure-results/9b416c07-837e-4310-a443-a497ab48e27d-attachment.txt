@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "./option[. = \"CIVIC EX SEDAN CA CE | STD | 4 puertas | 4 cilindros | 5 pasajeros\"]|./option[normalize-space(text()) = \"CIVIC EX SEDAN CA CE | STD | 4 puertas | 4 cilindros | 5 pasajeros\"]|./optgroup/option[. = \"CIVIC EX SEDAN CA CE | STD | 4 puertas | 4 cilindros | 5 pasajeros\"]|./optgroup/option[normalize-space(text()) = \"CIVIC EX SEDAN CA CE | STD | 4 puertas | 4 cilindros | 5 pasajeros\"]"
+}

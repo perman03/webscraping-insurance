@@ -13,6 +13,6 @@
     "wdio-video-reporter": "^6.1.1"
   },
   "scripts": {
-    "test": "wdio run ./wdio.conf.js"
+    "scraping": "wdio run ./wdio.conf.js"
   }
 }

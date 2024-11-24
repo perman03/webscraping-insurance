@@ -87,9 +87,9 @@ When('I view my car info and extract it', async()=>{
     const fourthCoberPriceText = await fourthCoberPriceInfo.getText();
 
 
-
+    const path = require('cotizaciones');
     const csvWriter = createObjectCsvWriter({
-        path: 'secureCar.csv',
+        path: path.resolve(__dirname, 'secureCar.csv'),
         header: [
             {id: 'carInfo', title: 'Car Info'},
             {id: 'carYear', title: 'Car Year'},
