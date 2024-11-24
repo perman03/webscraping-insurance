@@ -34,8 +34,8 @@ pipeline {
             steps {
                 echo 'Publicando artefactos...'
                 // Copia videos u otros artefactos al directorio para HTML Publisher
-                bat 'mkdir -p target'
-                bat 'copy secureCar.csv target/'
+                bat 'mkdir target'
+                bat 'copy secureCar.csv target\\'
                 
                 publishHTML(target: [
                     allowMissing: false,
