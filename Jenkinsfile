@@ -2,7 +2,8 @@ pipeline {
     agent any
     environment {
         // Define variables de entorno necesarias
-        NODE_HOME = 'Users/frank/AppData/Roaming/nvm' // Ajusta esto según tu entorno
+        NODE_HOME = 'C:\\Program Files\\nodejs' // Ajusta esto según tu entorno
+        PATH = "${NODE_HOME};${env.PATH}"
     }
     stages {
         stage('Checkout Code') {
