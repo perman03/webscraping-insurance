@@ -14,13 +14,13 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 echo 'Instalando dependencias...'
-                sh 'npm install'
+                bat 'npm install'
             }
         }
         stage('Run Tests') {
             steps {
                 echo 'Ejecutando pruebas con WebdriverIO...'
-                sh 'npm run scraping'
+                bat 'npm run scraping'
             }
         }
         stage('Archive CSV') {
@@ -33,8 +33,8 @@ pipeline {
             steps {
                 echo 'Publicando artefactos...'
                 // Copia videos u otros artefactos al directorio para HTML Publisher
-                sh 'mkdir -p target'
-                sh 'cp secureCar.csv target/'
+                bat 'mkdir -p target'
+                bat 'cp secureCar.csv target/'
                 
                 publishHTML(target: [
                     allowMissing: false,
