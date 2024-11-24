@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "./option[. = \"CIVIC TURBO PLUS SEDAN CA CE CB CQ PIEL | AUT | 4 puertas | 4 cilindros | 5 pasajeros\"]|./option[normalize-space(text()) = \"CIVIC TURBO PLUS SEDAN CA CE CB CQ PIEL | AUT | 4 puertas | 4 cilindros | 5 pasajeros\"]|./optgroup/option[. = \"CIVIC TURBO PLUS SEDAN CA CE CB CQ PIEL | AUT | 4 puertas | 4 cilindros | 5 pasajeros\"]|./optgroup/option[normalize-space(text()) = \"CIVIC TURBO PLUS SEDAN CA CE CB CQ PIEL | AUT | 4 puertas | 4 cilindros | 5 pasajeros\"]"
+}
